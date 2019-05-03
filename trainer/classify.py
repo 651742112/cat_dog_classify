@@ -72,12 +72,12 @@ class Trainer():
                 val_loss.append(self.val(model, val_loader, criterion)[0])  # 验证数据集中的loss
                 val_accuracy.append(self.val(model, val_loader, criterion)[1])  # 验证数据集中的精度
                 print('Epoch:{}/{} \t Val Loss: {:.6f} \t Val Acc: {:.2f}% \t Time:{:.3f}s'.format(epoch + 1,
-                                                                                                           opt.num_epochs,
-                                                                                                           val_loss[
-                                                                                                               -1],
-                                                                                                           val_accuracy[
-                                                                                                               -1],
-                                                                                                           stop - start))
+                                                                                                   opt.num_epochs,
+                                                                                                   val_loss[
+                                                                                                       -1],
+                                                                                                   val_accuracy[
+                                                                                                       -1],
+                                                                                                   stop - start))
 
             train_loss.append(iter_loss / (len(train_loader) * opt.batch_size))  # 训练数据集中的loss
             train_accuracy.append((int(correct) * 100 / ((len(train_loader) * opt.batch_size))))  # 训练数据集中的精度

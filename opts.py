@@ -13,13 +13,13 @@ class opts(object):
     data_name = "{}_{}_{}".format(image_size, image_size, exp_name)  # 数据文件夹名称(备注：可自行更改名称)
 
     ## 网络模型
-    model = 'CNN'
+    model = 'CNN'  # 可取值'CNN','GoogLeNet'
 
     ## 优化器
-    optimizer = 'SGD'
+    optimizer = 'SGD'  # 可取值'SDG','RMS','ADAM'
 
     ## 损失函数
-    criterion = 'CrossEntropyLoss'
+    criterion = 'CrossEntropyLoss'  # 可取值'CrossEntropyLoss'
 
     ## 训练参数设置
     trainer_name = 'classify'  # 训练器

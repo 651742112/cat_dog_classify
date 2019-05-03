@@ -63,19 +63,19 @@ def train():
     trainer.train(train_loader, val_loader)  # 训练
 
 
-def test():
-    opt = opts()
-    model = init_model(opt)  # 定义网络
-    criterion = init_criterion(opt)  # 定义损失函数
-    optimizer = init_optimizer(opt, model)  # 定义优化器
-    trainer = init_trainer(opt, model, criterion, optimizer)  # 定义训练器
-    test_loader = init_dataloader(opt, 'test')  # 加载测试数据
-    trainer.test(test_loader)  # 测试一个网络模型，模型在opt参数里面定义
-
-    # 如若需要测试所有模型，请如下遍历所有模型
-    # for i in range(150):
-    #     trainer.opt.test_model_name = "{}.pth".format(i) #模型名称
-    #     trainer.test(test_loader)  # 测试
+# def test():
+#     opt = opts()
+#     model = init_model(opt)  # 定义网络
+#     criterion = init_criterion(opt)  # 定义损失函数
+#     optimizer = init_optimizer(opt, model)  # 定义优化器
+#     trainer = init_trainer(opt, model, criterion, optimizer)  # 定义训练器
+#     test_loader = init_dataloader(opt, 'test')  # 加载测试数据
+#     trainer.test(test_loader)  # 测试一个网络模型，模型在opt参数里面定义
+#
+#     # 如若需要测试所有模型，请如下遍历所有模型
+#     # for i in range(150):
+#     #     trainer.opt.test_model_name = "{}.pth".format(i) #模型名称
+#     #     trainer.test(test_loader)  # 测试
 
 
 if __name__ == '__main__':
