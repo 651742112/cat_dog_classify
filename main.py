@@ -73,7 +73,7 @@ def test_model():
     trainer.test(test_loader)  # 测试一个网络模型，模型在opt参数里面定义
 
     # 如若需要测试所有模型，请如下遍历所有模型
-    # for i in range(150):
+    # for i in range(130):
     #     trainer.opt.test_model_name = "{}.pth".format(i) #模型名称
     #     trainer.test(test_loader)  # 测试
 
